@@ -1,0 +1,82 @@
+body { /* Set style for the page body */
+    font-family: Arial, sans-serif; /* Set font */
+    direction: rtl; /* Set text direction to right-to-left since we are writing in hebrew*/
+    background-color: peru; /* Set background color */
+}
+header { /* Style the page header */
+    background-color: #a52a2a; /* Custom red background */
+    color: white; /* White text */
+    padding: 20px; /* Padding inside the header */
+    text-align: center; /* Center the header text */
+}
+nav { /* Style the navigation bar */
+	background-color: #f2d3b1; /* Custom beige background */
+    text-align: center; /* Center the links */
+    padding: 10px 0; /* Padding for the navigation bar */
+}
+
+nav a {   /* The options inside the navigation bar */
+	margin: 0 15px; /* Space them */
+	text-decoration: none; 
+	color: #5a2a00; /* A custom brown for contrast */
+	font-weight: bold; /* Make the text bolder */
+}
+nav a:hover {   /* Hover effect for nav links */
+	text-decoration: underline; /* When the user hovers over an option in the navigation bar the option will have an underline */
+}
+main { /* Main area */
+	padding: 40px; /* Add spacing around content */
+	text-align: center; /* Center-align content */
+}
+main img { /* Style images in the main section */
+	width: 80%;  /* set the width of the images based on main */
+	max-width: 600px; /* Limit maximum width */
+	border-radius: 15px; /* Rounds the corners */
+	margin-bottom: 20px; /* Space below the image */
+}
+footer { /* Style for footer section */
+    background-color: #a52a2a; /* Same as header */
+    color: white; /* White text */
+    text-align: center; /* Center-align text */
+    padding: 15px; /* Padding inside footer */
+    width: 100%; /* Full width */
+}
+table {
+	margin: auto; /* Center table horizontally */
+}
+
+h3 { /* Style for h3 headings */
+    text-align: center; /* Center-align heading */
+    color: #a52a2a; /* red color liek header */
+    font-size: 300%; /* Large font size */
+}
+
+#order-notes { /* Align text and buttons to the center */
+    text-align: center;
+}
+
+.fa { /* Social Media Icons */
+    padding: 20px; /* Space inside icons */
+    font-size: 30px; /* Size of icons */
+    width: 30px; /* Icon width */
+    text-align: center; /* Center icon content */
+    text-decoration: none;
+    margin: 5px 2px; /* Margin around icons */
+    border-radius: 50%; /* Make icons circular */
+}
+
+.fa-facebook { /* Facebook icon style */
+    background: #3B5998; /* Facebook blue */
+    color: white; /* White icon */
+}
+
+.fa-instagram { /* Instagram icon style */
+    background: #125688; /* Instagram blue */
+    color: white; /* White icon */
+}
+
+#preview { /* Preview section center alignment */
+    text-align: center; /* Center-align content */
+    margin-top: 20px;  /* Space above the preview */
+    font-weight: bold; /* Make the preview text bold */
+}
