@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- make the site have proper size in every device -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- this JS is for social media icons -->
+		<script src="BUJULE_JS.js"></script> <!-- adding our java script -->
+		<script src="LOGIC_JS.js"></script> <!-- adding our java script-->
+		<title>מעדניית בוז'ולה</title> <!-- title of the site -->
+		<link rel="stylesheet" href="BUJULE_CSS.css"> <!-- adding our CSS file for design -->
+	</head>
+	<body>
+		<header> <!-- the header of the site -->
+			<h1>מעדניית בוז'ולה</h1>
+			טעמים של בית באיכות מעולה
+		</header>
+		<nav> <!-- this is the navigation options in the site --> 
+			<a href="#">דף הבית</a>
+			<a href="#">אודות</a>
+			<a href="#">תפריט</a>
+			<a href="#">צור קשר</a>
+		</nav>
+		<main> <!-- the main part of the site -->
+		    <img src="picture.PNG"><br>
+			<img src="sand.jpeg">
+			<h2>ברוכים הבאים!</h2>
+			אצלנו תמצאו גבינות משובחות, נקניקים בעבודת יד, לחמים טריים, עוגות ועוד הפתעות טעימות.<br>
+			<div class="promo-video">
+			<h3>צפו בוידאו שלנו</h3>
+			<!-- This is an embedded SaaS video player from YouTube. It displays a video showcasing the restaurant. -->
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/-SP1NCnhTnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</div>
+		</main>
+		<h3>הזמנת כריך</h3>
+		<form id="sandwichForm"> <!-- starting the form for ordering a sandwich -->
+			<table border="0"> <!-- the table will be used to allign the form -->
+				<tr>
+					<td>
+						שם המזמין:
+					</td>
+					<td>
+						<input type="text" id="name" value="הכנס את שמך">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					טלפון:
+					</td>
+					<td>
+						<input type="text" id="phone" value="הכנס את מספר הטלפון">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						בחר תאריך:<br>
+					<td>
+						<input type="date" id="orderDate" name="orderDate"><br>
+				</tr>
+				<tr>
+				<td>
+					בחר שעה:<br>
+				</td>
+				<td>
+					<input type="time" id="orderTime" name="orderTime"><br>
+				</tr>
+				<tr>
+					<td>    
+						בחר ירקות:  <!-- checkbox in order to select multiple vegetables -->
+						</td>
+					<td>
+						<br>
+						<input type="checkbox" name="vegetables" value="עגבנייה">עגבנייה<br>
+						<input type="checkbox" name="vegetables" value="מלפפון">מלפפון<br>
+						<input type="checkbox" name="vegetables" value="חסה">חסה<br>
+						<input type="checkbox" name="vegetables" value="בצל">בצל<br>
+						<input type="checkbox" name="vegetables" value="זיתים">זיתים<br><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						בחר לחם: <!-- radio to select only one type of bread -->
+					</td>
+					<td>
+						<br>
+						<input type="radio" name="bread" value="מלא">לחם מלא<br>
+						<input type="radio" name="bread" value="כוסמין">לחם כוסמין<br>
+						<input type="radio" name="bread" value="ג'בטה">ג'בטה<br><br>
+					</td>
+				<tr>
+					<td>    
+						בחר גבינה: <!-- radio to select only one type of cheese -->
+					</td>
+					<td>
+						<br>
+						<input type="radio" name="cheese" value="צהובה">גבינה צהובה<br>
+						<input type="radio" name="cheese" value="בולגרית">גבינה בולגרית<br>
+						<input type="radio" name="cheese" value="שמנת">גבינת שמנת<br>
+						<input type="radio" name="cheese" value="עיזים">גבינת עיזים<br><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						בחר כמות סנדוויצ'ים: <!-- select option to select the number of sandwiches of the same type -->
+					</td>
+					<td>
+						<br>
+						<select name="amount">
+						<option value="0">---</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</td>
+				</tr>
+			</table>
+			<div id="order-notes">
+			<br><br>
+			הערות להזמנה:<br>
+			<textarea id="notes" name="notes" rows="4" cols="40">---</textarea><br><br> <!-- defining the text area -->
+			<input type="button" value="שלח הזמנה" onclick="generateText()"> <!-- defining the "send order" button -->
+			<input type="button" value="איפוס הזמנה" onclick="resetForm()">	
+		</form>
+		<div id="preview"></div><br> <!-- this line will show the order once it is finished -->
+		<div id="textToPrint"></div>
+		<footer> <!-- the footer, the lowest part of the site. will contain information and links to social media -->
+		 בוז'ולה. כל הזכויות שמורות. Ⓒ
+		 <a href="https://www.facebook.com/bujulehaifa" class="fa fa-facebook" target="_blank"></a> <!-- link to facebook -->
+		 <a href="https://www.instagram.com/bujule_haifa/" class="fa fa-instagram" target="_blank"></a> <!-- ling to instagram -->
+		 טלפון: 04-811-2238
+	  </footer>
+	  	<!-- This SaaS displays a live counter provided by bringthemhomenow.net. -->
+		<!-- The counter shows the time that has passed since hundreds of people were taken hostage by Hamas on October 7, 2023. -->
+	  <div id="bthn" lang="en"></div>
+		<script>
+		 (function () {
+		   var script = document.createElement("script");
+		   script.type = "text/javascript";
+		   script.src = "https://bringthemhomenow.net/1.3.0/hostages-ticker.js";
+		   script.setAttribute(
+			 "integrity",
+			 "sha384-MmP7bD5QEJWvJccg9c0lDnn3LjjqQWDiRCxRV+NU8hij15icuwb29Jfw1TqJwuSv"
+		   );
+		   script.setAttribute("crossorigin", "anonymous");
+		   document.getElementsByTagName("head")[0].appendChild(script);
+		 })();
+		</script>
+	</body>
+</html>
